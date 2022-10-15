@@ -14,6 +14,6 @@
 ### Measurements
 With the help of a caliper, the length of the links, which are found in figure 1, is measured. With these lengths and the angles of the Home position, the DHst table is made.
 
-![Measurements](https://github.com/dpinedasi/Lab4Rob/imagenes/LINKS.png)
+![Measurements](https://github.com/dpinedasi/Lab4Rob/blob/main/imagenes/LINKS.png)
 
 
