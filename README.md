@@ -16,4 +16,6 @@ With the help of a caliper, the length of the links, which are found in figure 1
 
 ![Measurements](https://github.com/dpinedasi/Lab4Rob/blob/main/imagenes/LINKS.png)
 
+In the case of L1, two meassurements had to be done as the link has a L shape. Then the Pythagoras theorem was applied in order to find the minimum distance between the two join axes.
+
 
