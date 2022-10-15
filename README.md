@@ -18,4 +18,4 @@ With the help of a caliper, the length of the links, which are found in figure 1
 
 In the case of L1, two meassurements had to be done as the link has a L shape. Then the Pythagoras theorem was applied in order to find the minimum distance between the two join axes.
 
-After that, the next task was to follow the instruccions described in the <a href="https://github.com/fegonzalez7/rob_unal_clase3" target="blank_">laboratory guide</a>. From wich the <a href="[https://github.com/fegonzalez7/rob_unal_clase3](https://github.com/fegonzalez7/dynamixel_one_motor.git)" target="blank_">Dynamixel_one_motor</a> was cloned. 
+After that, the next task was to follow the instruccions described in the <a href="https://github.com/fegonzalez7/rob_unal_clase3" target="blank_">laboratory guide</a>. From wich the <a href="https://github.com/fegonzalez7/dynamixel_one_motor.git" target="blank_">Dynamixel_one_motor</a> was cloned. 
