@@ -20,17 +20,16 @@ In the case of L1, two meassurements had to be done as the link has a L shape. T
 
 ![DH parameters](https://github.com/dpinedasi/Lab4Rob/blob/main/imagenes/dhstd.png)
 
-Con la anterior tabla y por medio de la libreria de Peter Corke se puede mostrar la orientación de cada articulación:
-
+With the previous table and through the Peter Corke library, the orientation of each joint can be shown:
 ![Home position](https://github.com/dpinedasi/Lab4Rob/blob/main/imagenes/q1PC.png)
 
 ### ROS-Dynamixel-Python
 
 After that, the next task was to follow the instruccions described in the <a href="https://github.com/fegonzalez7/rob_unal_clase3" target="blank_">laboratory guide</a>. From wich the <a href="https://github.com/fegonzalez7/dynamixel_one_motor.git" target="blank_">Dynamixel_one_motor</a> was cloned. 
 
-Usamos Dynamixel wizard para probar el funcionamiento de los motores y sus rangos articulares, apartir de esto se realiza un codigo en python para poder controlar el robot por medio de ROS .
+We use the Dynamixel wizard to test the operation of the motors and their joint ranges, from this a code is made in python to be able to control the robot through ROS.
 
-Se define la función jointCommand, la cual inicializa un nodo, y se crea la interacción con los servicios de Dynamixel, de forma que se entrega el ID de la articulación, el addr_name, que es la acción que se va a realizar, el valor a cambiar u objetivo, y el tiempo. La variable command se deja como un string en blanco. 
+The jointCommand function is defined, which initializes a node, and the interaction with the Dynamixel services is created, so that the ID of the joint is delivered, the addr_name, which is the action to be carried out, the value to change or target, and time. The command variable is left as a blank string.
 
 ```
 def jointCommand(command, id_num, addr_name, value, time):
@@ -56,14 +55,14 @@ if __name__ == '__main__':
         pass
 ```
 
-Las siguientes líneas de código son las que permiten entrelazar el mando por teclado y los servicios de dynamixel. Por medio de un while(), se ejecuta la acción indefinida mente hasta que se termine el proceso con la tecla 'ESC'. 
+The following lines of code are the ones that allow interlocking the keyboard command and the dynamixel services. By means of a while(), the action is executed indefinitely until the process is terminated with the 'ESC' key.
 
-En este ciclo la idea principal es brindar las funciones a las teclas 'q', 'a', 'd', 'f','h', las cuales represenatrán cada pose deseada del robot:
-* q representa q1=[ 0 0 0 0]
-* a representa q2=[-20pi/180,20pi/180,-20pi/180,20pi/180,0]
-* d representa q3=[30pi/180,-30pi/180,30pi/180,-30pi/180,0]
-* f representa q4= [-90pi/180,45pi/180,-55pi/180,45pi/180,10pi/180] 
-* h representa q5= [0, -pi/2, pi/2, pi/4, 0]   
+In this cycle the main idea is to give the functions to the keys 'q', 'a', 'd', 'f', 'h', which will represent each desired pose of the robot:
+* q represents q1=[ 0 0 0 0]
+* a represents q2=[-20pi/180,20pi/180,-20pi/180,20pi/180,0]
+* d represents q3=[30pi/180,-30pi/180,30pi/180,-30pi/180,0]
+* f represents q4= [-90pi/180,45pi/180,-55pi/180,45pi/180,10pi/180] 
+* h represents q5= [0, -pi/2, pi/2, pi/4, 0]   
 
 ```
 def joint_publisher():
@@ -109,14 +108,14 @@ def joint_publisher():
 [![Implementation](http://img.youtube.com/vi/wPWUIFMu8iU/0.jpg)](https://www.youtube.com/watch?v=wPWUIFMu8iU&ab_channel=DanielPineda)
 
 ## Toolbox
-Se presenta la visualizacion de los robots con ayuda del toolbox de Peter Corke en mathlab y se compara con lo obtenido la implementacion fisica:
-* Para q1
+The visualization of the robots is presented with the help of Peter Corke's toolbox in mathlab and it is compared with what is obtained from the physical implementation:
+* For q1
 ![Home position](https://github.com/dpinedasi/Lab4Rob/blob/main/imagenes/q1PC.png)
-* Para q2
+* For q2
 ![q2](https://github.com/dpinedasi/Lab4Rob/blob/main/imagenes/q2PC.png)
-* Para q3
+* For q3
 ![q3](https://github.com/dpinedasi/Lab4Rob/blob/main/imagenes/q3PC.png)
-* Para q4
+* For q4
 ![q4](https://github.com/dpinedasi/Lab4Rob/blob/main/imagenes/q4PC.png)
-* Para q5
+* For q5
 ![q5](https://github.com/dpinedasi/Lab4Rob/blob/main/imagenes/q5PC.png)
