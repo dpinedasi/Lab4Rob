@@ -56,6 +56,53 @@ if __name__ == '__main__':
         pass
 ```
 
+Las siguientes líneas de código son las que permiten entrelazar el mando por teclado y los servicios de dynamixel. Por medio de un while(), se ejecuta la acción indefinida mente hasta que se termine el proceso con la tecla 'ESC'. 
 
+En este ciclo la idea principal es brindar las funciones a las teclas 'q', 'a', 'd', 'f','h', las cuales represenatrán cada pose deseada del robot:
+* q representa q1=[ 0 0 0 0]
+* a representa q2=[-20pi/180,20pi/180,-20pi/180,20pi/180,0]
+* d representa q3=[30pi/180,-30pi/180,30pi/180,-30pi/180,0]
+* f representa q4= [-90pi/180,45pi/180,-55pi/180,45pi/180,10pi/180] 
+* h representa q5= [0, -pi/2, pi/2, pi/4, 0]   
+
+```
+def joint_publisher():
+    pub = rospy.Publisher('/joint_trajectory', JointTrajectory, queue_size=0)
+    rospy.init_node('joint_publisher', anonymous=False)
+    aux=[0,0,0,0,0]
+    while not rospy.is_shutdown():
+        key=input()
+        #if KeyboardInterrupt:
+        #    key=getkey()
+        state = JointTrajectory()
+        state.header.stamp = rospy.Time.now()
+        state.joint_names = ["joint_1","joint_2","joint_3","joint_4","joint_5"]
+        point = JointTrajectoryPoint()
+        if key == 'q':
+            aux = [0,0,0,0,0]
+            key=' '
+        if key == 'a':
+            aux = [-20*pi/180,20*pi/180,-20*pi/180,20*pi/180,0]
+            key=' '
+        elif key == 's':
+            aux = [30*pi/180,-30*pi/180,30*pi/180,-30*pi/180,0]
+            key=' '
+        elif key == 'd':
+            aux = [-90*pi/180,15*pi/180,-55*pi/180,17*pi/180,0]
+            key=' '
+        elif key == 'f':
+            aux = [-90*pi/180,45*pi/180,-55*pi/180,45*pi/180,10*pi/180]   
+            key=' ' 
+        elif key == 'h':
+            aux = point.positions = [0, -pi/2, pi/2, pi/4, 0]    
+            key=' '     
+
+        point.positions = aux   
+        point.time_from_start = rospy.Duration(0.5)
+        state.points.append(point)
+        pub.publish(state)
+        print('published command')
+        rospy.sleep(1)
+```
 
 
