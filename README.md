@@ -106,6 +106,7 @@ def joint_publisher():
 ## Demonstration video
 ### LabSir Implementation
 [![Implementation](http://img.youtube.com/vi/wPWUIFMu8iU/0.jpg)](https://www.youtube.com/watch?v=wPWUIFMu8iU&ab_channel=DanielPineda)
+ [video](https://www.youtube.com/watch?v=wPWUIFMu8iU&ab_channel=DanielPineda)
 
 ## Toolbox
 The visualization of the robots is presented with the help of Peter Corke's toolbox in mathlab and it is compared with what is obtained from the physical implementation:
