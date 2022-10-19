@@ -104,5 +104,19 @@ def joint_publisher():
         print('published command')
         rospy.sleep(1)
 ```
+## Demonstration video
+### LabSir Implementation
+[![Implementation](http://img.youtube.com/vi/wPWUIFMu8iU/0.jpg)](https://www.youtube.com/watch?v=wPWUIFMu8iU&ab_channel=DanielPineda)
 
-
+## Toolbox
+Se presenta la visualizacion de los robots con ayuda del toolbox de Peter Corke en mathlab y se compara con lo obtenido la implementacion fisica:
+* Para q1
+![Home position](https://github.com/dpinedasi/Lab4Rob/blob/main/imagenes/q1PC.png)
+* Para q2
+![q2](https://github.com/dpinedasi/Lab4Rob/blob/main/imagenes/q2PC.png)
+* Para q3
+![q3](https://github.com/dpinedasi/Lab4Rob/blob/main/imagenes/q3PC.png)
+* Para q4
+![q4](https://github.com/dpinedasi/Lab4Rob/blob/main/imagenes/q4PC.png)
+* Para q5
+![q5](https://github.com/dpinedasi/Lab4Rob/blob/main/imagenes/q5PC.png)
